@@ -1,0 +1,16 @@
+
+.titlePokedexContainer{
+    max-height: 10vh;
+    border-bottom: .5px solid var(--blueColor);
+}
+
+.pokemonsListConainer{
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+
+.newButtonContainer{
+    height: 15vh;
+    border-top: .5px solid var(--blueColor);
+}

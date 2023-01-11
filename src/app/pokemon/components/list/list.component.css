@@ -1,0 +1,27 @@
+.pokemonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px;
+    border: .5px solid var(--blueColor);
+    padding: 8px;
+}
+
+.pokemonData{
+    border: 1px solid var(--blueColor);
+    padding: 5px;
+    vertical-align: middle;
+    font-size: 15px;
+}
+
+.w-type{
+    width: 60px;
+}
+
+.w-name{
+    width: 190px;
+}
+
+.w-lvl{
+    width: 35px;
+}
+

@@ -1,0 +1,16 @@
+.newBotonContainer{
+    display: flex;
+    justify-content: end;
+    margin: 12px 20px;
+}
+
+.newBoton{
+    border: 1px solid var(--blueColor);
+    border-radius: 50%;
+    padding: 10px;
+    margin: 0;
+    width: 55px;
+    height: 55px;
+    background-color: transparent;
+    position: absolute;
+}   
