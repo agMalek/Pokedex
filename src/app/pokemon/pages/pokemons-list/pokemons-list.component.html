@@ -1,10 +1,7 @@
 
-<div class="titlePokedexContainer">
-    <app-title-pokedex></app-title-pokedex>
-</div >
 
 <div class="pokemonsListConainer">
-    <app-list></app-list>
+    <app-list-item *ngFor="let pokemon of pokemonsArray" [pokemon]="pokemon"></app-list-item>
 </div>
 
 

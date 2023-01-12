@@ -1,9 +1,4 @@
 
-.titlePokedexContainer{
-    max-height: 10vh;
-    border-bottom: .5px solid var(--blueColor);
-}
-
 .pokemonsListConainer{
     max-height: 75vh;
     overflow-y: auto;

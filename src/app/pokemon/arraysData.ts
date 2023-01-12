@@ -1,7 +1,7 @@
-import { Pokemon } from './interfaces/interfaces';
+import { Pokemon, Pokemon_abilities } from './interfaces/interfaces';
 
 
-const pokemons:Pokemon[] = [
+export const pokemons:Pokemon[] = [
     {
       id: 1,
       name: 'Pokemon 1',
@@ -159,6 +159,14 @@ const pokemons:Pokemon[] = [
       image: 'img'
     },
     
-  ]
+]
 
-export default pokemons
+export const abilities:Pokemon_abilities[] = [
+  {name:"Rápido", description:"Muy Rápido"},
+  {name:"Fuerte", description:"Muy Fuerte"},
+  {name:"Inteligente", description:"Muy inteligente"},
+  {name:"Astuto", description:"Muy astuto"},
+  {name:"Leal", description:"Muy leal"},
+  {name:"Volador", description:"Puede volar"}
+]
+

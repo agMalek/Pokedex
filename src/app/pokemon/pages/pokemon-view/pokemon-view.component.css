@@ -1,0 +1,27 @@
+.imgContainer{
+    width: 100%;
+}
+
+
+.pokemonImg{
+    width: 70%;
+    height: 200px;
+    margin: 0 15%;
+    
+}
+
+.abilityItem{
+    display: flex;
+    justify-content: space-between;
+    color: var(--blueColor);
+}
+
+.buttonsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsContainer button{
+    margin: 10px;
+    width: 90px;
+}

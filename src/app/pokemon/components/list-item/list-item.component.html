@@ -1,6 +1,6 @@
   
-<div class="pokemonContainer" *ngFor="let pokemon of pokemonsArray">
+<div class="pokemonContainer" [routerLink]="['/pokemon', pokemon.id]">
     <div class="mx-1 w-type text-center pokemonData">{{pokemon.type[0]}}</div>
     <div class="mx-1 w-name pokemonData">{{pokemon.name}}</div>
     <div class="mx-1 w-lvl text-center pokemonData">{{pokemon.lvl}}</div>
-</div>   
+</div>
