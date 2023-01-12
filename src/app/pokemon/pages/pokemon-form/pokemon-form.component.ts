@@ -13,6 +13,7 @@ export class PokemonFormComponent {
   
   abilities!:Pokemon_abilities[]
   pokemonCurrent:Pokemon
+  primerIntento!:boolean
 
   nameValue:string = ""
   typeValue:string = ''
@@ -27,6 +28,7 @@ export class PokemonFormComponent {
   ){
     this.abilities = allAbilities
     this.pokemonCurrent = this.pokemonService.getPokemonCurrent
+    this.primerIntento = this.pokemonService.getIsToCreate ? true : false
     this.nameValue = this.pokemonService.getIsToCreate ? '' : this.pokemonCurrent.name
     this.typeValue = this.pokemonService.getIsToCreate ? '' : this.pokemonCurrent.type[0]
     this.lvlValue = this.pokemonService.getIsToCreate ? 1 : this.pokemonCurrent.lvl
@@ -45,17 +47,30 @@ export class PokemonFormComponent {
   
   saveChanges():void{
 
-    let obj:Pokemon = this.getPokemonWithNewValues()
+    this.primerIntento = false
+    if(this.notError()){
+      let obj:Pokemon = this.getPokemonWithNewValues()
 
-    if(this.pokemonService.getIsToCreate){   // if will create
-      this.createNewPokemon(obj)
-    }else{                                   // will to edit
-      this.editPokemon(obj)
+      if(this.pokemonService.getIsToCreate){   // if will create
+        this.createNewPokemon(obj)
+      }else{                                   // will to edit
+        this.editPokemon(obj)
+      }
+    }else{
+      console.log('noooo')
     }
+    
   }
 
   
   // ---------------------- PRIVATES FUNCTIONS --------------------
+
+
+  private notError():boolean {
+    return (this.nameValue !== '' && this.typeValue !== '' && this.imgValue !== '' && this.lvlValue > 0)
+  }
+
+
 
   private getPokemonWithNewValues():Pokemon{
     return {

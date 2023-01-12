@@ -170,4 +170,3 @@ export const abilities:Pokemon_abilities[] = [
   {name:"Volador", description:"Puede volar"},
   {name:"Listo", description:"Muy Listo"}
 ]
-
