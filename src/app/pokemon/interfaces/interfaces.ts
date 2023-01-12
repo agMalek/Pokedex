@@ -2,7 +2,7 @@ export interface Pokemon{
     id: number,
     name: string,
     lvl: number,
-    evolutionId: number,
+    evolutionId?: number,
     abilities: Pokemon_abilities[],
     type: string[],
     image: string

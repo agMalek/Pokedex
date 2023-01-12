@@ -6,6 +6,8 @@ import { NewButtonComponent } from './components/new-button/new-button.component
 import { PokemonViewComponent } from './pages/pokemon-view/pokemon-view.component';
 import { RouterModule } from '@angular/router';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
+import { PokemonFormComponent } from './pages/pokemon-form/pokemon-form.component';
+import { FormsModule } from "@angular/forms";
 
 
 
@@ -14,15 +16,17 @@ import { PrimeNGModule } from '../prime-ng/prime-ng.module';
     PokemonListComponent,
     ListComponent,
     NewButtonComponent,
-    PokemonViewComponent
+    PokemonViewComponent,
+    PokemonFormComponent
   ],
   exports:[
     PokemonListComponent
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule,
-    PrimeNGModule
+    PrimeNGModule,
   ]
 })
 export class PokemonModule { }

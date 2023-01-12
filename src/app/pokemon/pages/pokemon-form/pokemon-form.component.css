@@ -1,0 +1,27 @@
+
+.pokemonForm{
+    padding: 30px;
+}
+
+.inputLarge{
+    width: 100%;
+}
+
+.inputMedium{
+    
+    width: 80%;
+}
+
+.checkboxItem{
+    width: 50%;
+}
+
+.buttonsContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsContainer button{
+    margin: 10px;
+    width: 90px;
+}

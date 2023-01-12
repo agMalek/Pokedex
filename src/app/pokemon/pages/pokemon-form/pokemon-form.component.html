@@ -1,0 +1,43 @@
+<form class="pokemonForm">
+
+    <!--  --------  NAME INPUT ---------  -->
+    <span class="p-float-label">
+        <input [(ngModel)]="nameValue" name="nameValue" id="float-input" class="inputLarge" type="text" pInputText>
+        <label for="float-input">Name</label>
+    </span>
+
+    <div class="d-flex justify-content-center my-4">
+
+        <!--  --------  TYPE INPUT ---------  -->
+        <span class="p-float-label">
+            <input [(ngModel)]="typeValue" name="typeValue" id="float-input" class="inputMedium" type="text" pInputText>
+            <label for="float-input">Type</label>
+        </span>
+        
+        <!--  --------  LEVEL INPUT ---------  -->
+        <span class="p-float-label">
+            <input [(ngModel)]="lvlValue" name="lvlValue" id="float-input" class="inputMedium " type="number" pInputText>
+            <label for="float-input">Level</label>
+        </span>
+    </div>
+
+    <!--  --------  IMAGE INPUT ---------  -->
+    <span class="p-float-label my-3">
+        <input [(ngModel)]="imgValue" name="imgValue" id="float-input" class="inputLarge" type="text" pInputText>
+        <label for="float-input">Image url</label>
+    </span>
+    
+
+    <!--  --------  ABILITIES CHECKBOXS ---------  -->
+    <p-fieldset legend="Select Abilities" [collapsed]="true" [toggleable]="true" [transitionOptions]="'0ms'">
+        <p-checkbox class="checkboxItem" *ngFor="let ability of abilities" name="selectedAbilities" [(ngModel)]="selectedAbilities" [value]="ability.name" [label]="ability.name"></p-checkbox>
+    </p-fieldset>
+
+
+    <!--  --------  BUTTONS ---------  -->
+    <div class="buttonsContainer">
+        <button pButton type="button" label="Cancel" class="p-button-raised p-button-rounded" (click)="cancelForm()"></button>
+        <button pButton type="button" label="Save" class="p-button-raised p-button-rounded" (click)="saveChanges()" ></button>
+    </div>
+
+</form>

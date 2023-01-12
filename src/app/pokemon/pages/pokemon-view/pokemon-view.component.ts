@@ -18,6 +18,7 @@ export class PokemonViewComponent implements OnInit{
 
   ngOnInit(): void {
     const id = parseInt(this.route.snapshot.params['id'])
+    console.log(id)
     this.pokemonService.setPokemonCurrent(id)
     this.pokemonCurrent = this.pokemonService.getPokemonCurrent
   }

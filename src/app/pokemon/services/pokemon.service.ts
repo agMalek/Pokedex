@@ -9,6 +9,7 @@ export class PokemonService {
 
   private _pokemons:Pokemon[] = [];
   private _pokemonCurrent!:Pokemon;
+  private _isToCreate:boolean = false;
 
   get getPokemons():Pokemon[]{
     return [...this._pokemons]
@@ -18,8 +19,11 @@ export class PokemonService {
     return {...this._pokemonCurrent}
   }
 
+  get getIsToCreate():boolean{
+    return this._isToCreate
+  }
 
-  constructor() { 
+  constructor(){
     this._pokemons = pokemons
   };
 
@@ -28,8 +32,27 @@ export class PokemonService {
     if(pok){
       this._pokemonCurrent = pok
     }
-    console.log(this._pokemonCurrent)
   };
+  
+  setIsToCreate(argument:boolean):void{
+    this._isToCreate = argument
+  }
+
+  updatePokemon(pokemon:Pokemon):void{
+    const i = this._pokemons.findIndex(p=>p.id === pokemon.id)
+    console.log(pokemon, i)
+    
+    this._pokemons.splice(i,1,pokemon)
+    console.log(this._pokemons)
+  }
+
+  addPokemon(pokemon:Pokemon):void{
+    this._pokemons.push(pokemon)
+  }
+
+  getAvailablePokemonID():number{
+    return this._pokemons[this._pokemons.length-1].id+1
+  }
 
 
 }

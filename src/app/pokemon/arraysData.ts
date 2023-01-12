@@ -162,11 +162,12 @@ export const pokemons:Pokemon[] = [
 ]
 
 export const abilities:Pokemon_abilities[] = [
-  {name:"Rápido", description:"Muy Rápido"},
+  {name:"Rapido", description:"Muy Rápido"},
   {name:"Fuerte", description:"Muy Fuerte"},
   {name:"Inteligente", description:"Muy inteligente"},
   {name:"Astuto", description:"Muy astuto"},
   {name:"Leal", description:"Muy leal"},
-  {name:"Volador", description:"Puede volar"}
+  {name:"Volador", description:"Puede volar"},
+  {name:"Listo", description:"Muy Listo"}
 ]
 
