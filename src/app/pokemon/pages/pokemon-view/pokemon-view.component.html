@@ -5,14 +5,22 @@
     <img class="pokemonImg" src="../../../../assets/images/pikachu.jpg" alt="">
 </div>
 
-<div class="m-2">
-    <p-card header="Abilities">
-        <div class="abilityItem" *ngFor="let ability of pokemonCurrent.abilities">
-            <h4>{{ability.name}}</h4>
-            <p>{{ability.description}}</p>
-        </div>
-    </p-card>
+<div class="abilitiesConainer">
+    <h4>Abilities</h4>
+    <div class="abilityItem" *ngFor="let ability of pokemonCurrent.abilities">
+        <h5>{{ability.name}}</h5>
+        <p>{{ability.description}}</p>
+    </div>
 </div>
+
+<div class="evolutionContainer"  [hidden]="hiddenEvolution">
+    <h4>Evolution</h4>
+    <app-list-item [pokemon]="evoPokemon"></app-list-item>
+</div>
+<div class="evolutionContainer"  [hidden]="!hiddenEvolution">
+    <h4>No Evolution</h4>
+</div>
+
 
 <div class="buttonsContainer">
     <button pButton type="button" label="Back" class="p-button-raised p-button-rounded" [routerLink]="['/user-pokemons', currentUserId]"></button>

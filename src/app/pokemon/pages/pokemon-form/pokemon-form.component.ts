@@ -78,6 +78,7 @@ export class PokemonFormComponent {
   private getPokemonWithNewValues():Pokemon{
     return {
       id: 0,
+      evolutionId: null,
       name: this.nameValue,
       type: [this.typeValue],
       lvl: this.lvlValue,
@@ -94,6 +95,7 @@ export class PokemonFormComponent {
 }
 
   private editPokemon(obj:Pokemon):void{
+    obj.evolutionId = this.pokemonCurrent.evolutionId
     obj.id =  this.pokemonCurrent.id,
     this.pokemonService.updatePokemon(obj)
     this.router.navigate(['/pokemon', obj.id])

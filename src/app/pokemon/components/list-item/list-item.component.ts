@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Pokemon } from '../../interfaces/interfaces';
 
 
@@ -7,9 +7,10 @@ import { Pokemon } from '../../interfaces/interfaces';
   templateUrl: './list-item.component.html',
   styleUrls: ['./list-item.component.css']
 })
-export class ListComponent {
+export class ListComponent{
 
-  @Input() pokemon!:Pokemon 
+  @Input() pokemon!:Pokemon
+
 
   
 

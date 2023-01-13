@@ -10,10 +10,32 @@
     
 }
 
+.abilitiesConainer, .evolutionContainer{
+    margin: 30px 15px;
+    text-align: center;
+}
+
+.abilitiesConainer h4, .evolutionContainer h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .abilityItem{
-    display: flex;
-    justify-content: space-between;
-    color: var(--blueColor);
+    border: 1px double var(--blueColor);
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.abilityItem p{
+    font-size: 12px;
+}
+
+.abilityItem h5{
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--blueColor);    
 }
 
 .buttonsContainer{
