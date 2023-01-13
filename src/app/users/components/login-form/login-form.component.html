@@ -1,0 +1,16 @@
+<form class="loginFormContainer">
+    <div>
+        <input class="loginInput" type="text" name="username" [(ngModel)]="username" placeholder="username">
+    </div>
+    <div>
+        <input class="loginInput" type="text" name="password" [(ngModel)]="password" placeholder="password">
+    </div>
+
+    <div>
+        <p class="alert alert-info" [hidden]="!showWarning">*Invalid credentials</p>
+    </div>
+
+    <div>  
+        <button pButton type="button" class="loginButton" (click)="login()">Login</button>
+    </div>
+</form>

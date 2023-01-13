@@ -7,6 +7,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app.routing.module';
 import { RouterModule } from '@angular/router';
+import { UsersModule } from './users/users.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     AppRoutingModule,
     PokemonModule,
-    SharedModule
+    SharedModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

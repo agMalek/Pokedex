@@ -1,10 +1,11 @@
-import { Pokemon, Pokemon_abilities } from './interfaces/interfaces';
+import { Pokemon, Pokemon_abilities } from './pokemon/interfaces/interfaces';
+import { User } from './users/interfaces/intefaces';
 
 
 export const pokemons:Pokemon[] = [
     {
       id: 1,
-      name: 'Pokemon 1',
+      name: 'Picachu 1',
       lvl: 1,
       evolutionId: 1,
       abilities: [
@@ -17,7 +18,7 @@ export const pokemons:Pokemon[] = [
     },
     {
       id: 2,
-      name: 'Pokemon 2',
+      name: 'Picachu 2',
       lvl: 2,
       evolutionId: 2,
       abilities: [
@@ -30,7 +31,7 @@ export const pokemons:Pokemon[] = [
     },
     {
       id: 3,
-      name: 'Pokemon 3',
+      name: 'Picachu 3',
       lvl: 3,
       evolutionId: 3,
       abilities: [
@@ -43,7 +44,7 @@ export const pokemons:Pokemon[] = [
     },
     {
       id: 4,
-      name: 'Pokemon 4',
+      name: 'Picachu 4',
       lvl: 4,
       evolutionId: 4,
       abilities: [
@@ -56,7 +57,7 @@ export const pokemons:Pokemon[] = [
     },
     {
       id: 5,
-      name: 'Pokemon 5',
+      name: 'Picachu 5',
       lvl: 5,
       evolutionId: 5,
       abilities: [
@@ -69,7 +70,7 @@ export const pokemons:Pokemon[] = [
     },
     {
       id: 6,
-      name: 'Pokemon 6',
+      name: 'Picachu 6',
       lvl: 6,
       evolutionId: 6,
       abilities: [
@@ -169,4 +170,10 @@ export const abilities:Pokemon_abilities[] = [
   {name:"Leal", description:"Muy leal"},
   {name:"Volador", description:"Puede volar"},
   {name:"Listo", description:"Muy Listo"}
+]
+
+
+export const users:User[] = [
+  {userID:1, username:'trainer', password:'password', pokemons: pokemons.slice(0,5)},
+  {userID:2, username:'master', password:'password', pokemons: pokemons.slice(6,11)}
 ]

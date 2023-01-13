@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { abilities as allAbilities } from '../../arraysData';
+import { abilities as allAbilities } from '../../../arraysData';
 import { Pokemon, Pokemon_abilities } from '../../interfaces/interfaces';
 import { PokemonService } from '../../services/pokemon.service';
 import { Router } from '@angular/router';
+import { UsersService } from '../../../users/service/users.service';
 
 @Component({
   selector: 'app-pokemon-form',
@@ -24,6 +25,7 @@ export class PokemonFormComponent {
   
   constructor( 
     private pokemonService:PokemonService, 
+    private usersService:UsersService,
     private router:Router,
   ){
     this.abilities = allAbilities
@@ -39,7 +41,8 @@ export class PokemonFormComponent {
 
   cancelForm():void{
     if(this.pokemonService.getIsToCreate){
-      this.router.navigate([''])
+      this.pokemonService.setIsToCreate(false)
+      this.router.navigate(['/user-pokemons', this.usersService.getCurrentUser.userID ])
     }else{
       this.router.navigate(['/pokemon', this.pokemonCurrent.id])
     }

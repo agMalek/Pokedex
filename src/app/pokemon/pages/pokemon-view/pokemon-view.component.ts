@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Pokemon } from '../../interfaces/interfaces';
 import { PokemonService } from '../../services/pokemon.service';
+import { UsersService } from '../../../users/service/users.service';
 
 @Component({
   selector: 'app-pokemon-view',
@@ -11,8 +12,10 @@ import { PokemonService } from '../../services/pokemon.service';
 export class PokemonViewComponent implements OnInit{
 
   pokemonCurrent!:Pokemon
+  currentUserId:number = 0
 
-  constructor(private pokemonService:PokemonService, private route:ActivatedRoute){
+  constructor(private pokemonService:PokemonService, private usersService:UsersService, private route:ActivatedRoute){
+    this.currentUserId = this.usersService.getCurrentUser.userID
   }
 
 

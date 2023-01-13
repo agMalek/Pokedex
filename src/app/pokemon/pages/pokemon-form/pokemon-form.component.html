@@ -17,11 +17,11 @@
 
     <div class="d-flex justify-content-center my-4">
 
-        <!--  --------  LEVEL INPUT ---------  -->
-        <!--  <span class="p-float-label">
-            <input [(ngModel)]="lvlValue" name="lvlValue" id="float-input" class="inputMedium " type="number"
-                pInputText>
-            <label for="float-input">Level</label>
+        
+         <!--  --------  TYPE INPUT ---------  -->
+    <!-- <span class="p-float-label">
+            <input [(ngModel)]="typeValue" name="typeValue" id="float-input" class="inputMedium" type="text" pInputText>
+            <label for="float-input">Type</label>
         </span> -->
         <div class="field">
             <label for="typeValue" class="d-block">Type</label>
@@ -31,13 +31,13 @@
 
         </div>
 
-        <!--  --------  IMAGE INPUT ---------  -->
-            <!-- <span class="p-float-label my-3">
-                    <input [(ngModel)]="imgValue" name="imgValue" id="float-input" required="true" class="inputLarge" type="text"
-                    pInputText>
-                    <label for="float-input">Image url</label>
-                </span> -->
-
+        
+<!--  --------  LEVEL INPUT ---------  -->
+        <!--  <span class="p-float-label">
+            <input [(ngModel)]="lvlValue" name="lvlValue" id="float-input" class="inputMedium " type="number"
+                pInputText>
+            <label for="float-input">Level</label>
+        </span> -->
         <div class="field">
             <label for="lvlValue" class="d-block">Level</label>
             <input class="inputMedium" id="lvlValue" type="number" min="1" aria-describedby="lvlValue-help" pInputText
@@ -47,12 +47,13 @@
 
     </div>
 
-
-    <!--  --------  TYPE INPUT ---------  -->
-    <!-- <span class="p-float-label">
-            <input [(ngModel)]="typeValue" name="typeValue" id="float-input" class="inputMedium" type="text" pInputText>
-            <label for="float-input">Type</label>
-        </span> -->
+<!--  --------  IMAGE INPUT ---------  -->
+            <!-- <span class="p-float-label my-3">
+                    <input [(ngModel)]="imgValue" name="imgValue" id="float-input" required="true" class="inputLarge" type="text"
+                    pInputText>
+                    <label for="float-input">Image url</label>
+                </span> -->
+   
     <div class="field">
         <label for="imgValue" class="d-block">Image url</label>
         <input class="inputLarge" id="imgValue" type="text" aria-describedby="imgValue-help" pInputText

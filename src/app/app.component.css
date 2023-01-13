@@ -1,5 +1,7 @@
 
 .titlePokedexContainer{
+    display: flex;
+    justify-content: space-evenly;
     max-height: 10vh;
     border-bottom: .5px solid var(--blueColor);
 }

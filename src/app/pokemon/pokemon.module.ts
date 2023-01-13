@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 import { PokemonFormComponent } from './pages/pokemon-form/pokemon-form.component';
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 
 
@@ -25,6 +26,7 @@ import { FormsModule } from "@angular/forms";
   imports: [
     CommonModule,
     FormsModule,
+    HttpClientModule,
     RouterModule,
     PrimeNGModule,
   ]

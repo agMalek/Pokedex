@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Pokemon } from '../interfaces/interfaces';
-import {pokemons} from '../arraysData';
+import { UsersService } from '../../users/service/users.service';
+import { User } from 'src/app/users/interfaces/intefaces';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +24,11 @@ export class PokemonService {
     return this._isToCreate
   }
 
-  constructor(){
-    this._pokemons = pokemons
+  
+
+  constructor(private usersService:UsersService){
+    this.usersService.setUserCurrentFromLocalStorage()
+    this._pokemons = this.usersService.getCurrentUser.pokemons
   };
 
   setPokemonCurrent(id:number){
@@ -37,18 +41,29 @@ export class PokemonService {
   setIsToCreate(argument:boolean):void{
     this._isToCreate = argument
   }
-
+  
   updatePokemon(pokemon:Pokemon):void{
     const i = this._pokemons.findIndex(p=>p.id === pokemon.id)
-    console.log(pokemon, i)
-    
     this._pokemons.splice(i,1,pokemon)
-    console.log(this._pokemons)
+    this.saveToLocalStorage()    
   }
-
+  
   addPokemon(pokemon:Pokemon):void{
     this._pokemons.push(pokemon)
+    this.saveToLocalStorage()    
   }
+  
+  saveToLocalStorage():void{
+    let user: User = {
+      ...this.usersService.getCurrentUser,
+      pokemons: [...this._pokemons]
+    }
+    
+    this.usersService.setUsersLocalStorage(user)
+
+    
+  }
+
 
   getAvailablePokemonID():number{
     return this._pokemons[this._pokemons.length-1].id+1
@@ -56,3 +71,8 @@ export class PokemonService {
 
 
 }
+
+  /* this.http.get<any>('https://testing.certant.com/pokedex-api/pokemon?userId=1', {'headers': {'Access-Control-Allow-Origin': '*'}})
+    .subscribe(resp => {
+      console.log(resp)
+    }) */

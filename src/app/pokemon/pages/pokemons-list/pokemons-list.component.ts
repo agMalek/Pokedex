@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Pokemon } from '../../interfaces/interfaces';
 import { PokemonService } from '../../services/pokemon.service';
 
@@ -7,7 +7,7 @@ import { PokemonService } from '../../services/pokemon.service';
   templateUrl: './pokemons-list.component.html',
   styleUrls: ['./pokemons-list.component.css']
 })
-export class PokemonListComponent implements OnInit{
+export class PokemonListComponent{
   
   
   pokemonsArray:Pokemon[] = []
@@ -16,8 +16,5 @@ export class PokemonListComponent implements OnInit{
     this.pokemonsArray = this.pokemonService.getPokemons
   }
 
-  ngOnInit(): void {
-    //this.pokemonService.setPokemonCurrent(0)
-  }
     
 }
