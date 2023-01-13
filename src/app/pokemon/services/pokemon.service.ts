@@ -48,11 +48,21 @@ export class PokemonService {
     const i = this._pokemons.findIndex(p=>p.id === pokemon.id)
     this._pokemons.splice(i,1,pokemon)
     this.saveToLocalStorage()    
+
+
+    let aux:Pokemon[] = JSON.parse(localStorage.getItem('pokemons')!)
+    const idx = aux.findIndex(p => p.id === pokemon.id)
+    aux.splice(idx,1,pokemon)
+    localStorage.setItem('pokemons', JSON.stringify(aux))
   }
   
   addPokemon(pokemon:Pokemon):void{
     this._pokemons.push(pokemon)
     this.saveToLocalStorage()    
+
+    let aux:Pokemon[] = JSON.parse(localStorage.getItem('pokemons')!)
+    aux.push(pokemon)
+    localStorage.setItem('pokemons', JSON.stringify(aux))
   }
   
   saveToLocalStorage():void{
@@ -60,21 +70,12 @@ export class PokemonService {
       ...this.usersService.getCurrentUser,
       pokemons: [...this._pokemons]
     }
-    
     this.usersService.setUsersLocalStorage(user)
-
-    
   }
 
 
   getAvailablePokemonID():number{
-    return this._pokemons[this._pokemons.length-1].id+1
+    const aux:Pokemon[] = JSON.parse(localStorage.getItem('pokemons')!) 
+    return aux[aux.length-1].id+1
   }
-
-
 }
-
-  /* this.http.get<any>('https://testing.certant.com/pokedex-api/pokemon?userId=1', {'headers': {'Access-Control-Allow-Origin': '*'}})
-    .subscribe(resp => {
-      console.log(resp)
-    }) */

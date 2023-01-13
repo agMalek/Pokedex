@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { users } from 'src/app/arraysData';
+import { Pokemon } from 'src/app/pokemon/interfaces/interfaces';
 import { User } from '../interfaces/intefaces';
 
 @Injectable({
@@ -16,6 +17,13 @@ export class UsersService{
       this._allUsers = users
       localStorage.setItem('users', JSON.stringify(users))
     }
+
+    let pokemons: Pokemon[] = []
+    this._allUsers.forEach(u => {
+      pokemons.push(...u.pokemons)
+    })
+    localStorage.setItem('pokemons', JSON.stringify(pokemons))
+
   }
   
   private _allUsers:User[] = []
