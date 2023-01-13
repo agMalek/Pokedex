@@ -12,15 +12,19 @@ import { UsersService } from '../../../users/service/users.service';
 })
 export class PokemonFormComponent {
   
-  abilities!:Pokemon_abilities[]
+  abilities:Pokemon_abilities[]
   pokemonCurrent:Pokemon
-  primerIntento!:boolean
+  primerIntento:boolean
+  pokemonToUpdateEvolution:Pokemon
+  hiddenRadioInEditPokemon:boolean = false 
 
   nameValue:string = ""
   typeValue:string = ''
   lvlValue:number = 1
   imgValue:string = ''
   selectedAbilities:string[] = []
+  evolutionRadioValue:boolean = false
+  
 
   
   constructor( 
@@ -30,12 +34,35 @@ export class PokemonFormComponent {
   ){
     this.abilities = allAbilities
     this.pokemonCurrent = this.pokemonService.getPokemonCurrent
-    this.primerIntento = this.pokemonService.getIsToCreate ? true : false
+    this.pokemonToUpdateEvolution = this.pokemonService.getPokemons[this.pokemonService.getPokemons.length-1]
+    
+   /*  this.primerIntento = this.pokemonService.getIsToCreate ? true : false
     this.nameValue = this.pokemonService.getIsToCreate ? '' : this.pokemonCurrent.name
     this.typeValue = this.pokemonService.getIsToCreate ? '' : this.pokemonCurrent.type[0]
     this.lvlValue = this.pokemonService.getIsToCreate ? 1 : this.pokemonCurrent.lvl
     this.imgValue = this.pokemonService.getIsToCreate ? '' : this.pokemonCurrent.image
-    this.selectedAbilities = this.pokemonService.getIsToCreate ? [] : this.convertToStringsArray()
+    this.selectedAbilities = this.pokemonService.getIsToCreate ? [] : this.convertToStringsArray() */
+
+    if(this.pokemonService.getIsToCreate){
+      this.primerIntento =  true 
+      this.nameValue =  '' 
+      this.typeValue =  '' 
+      this.lvlValue =  1 
+      this.imgValue = '' 
+      this.selectedAbilities = []
+      this.hiddenRadioInEditPokemon = false
+    }
+    else{
+      this.primerIntento =  false 
+      this.nameValue = this.pokemonCurrent.name 
+      this.typeValue = this.pokemonCurrent.type[0] 
+      this.lvlValue = this.pokemonCurrent.lvl
+      this.imgValue =  this.pokemonCurrent.image 
+      this.selectedAbilities = this.convertToStringsArray()
+      this.hiddenRadioInEditPokemon = true
+    }
+
+
   }
   
 
@@ -59,8 +86,6 @@ export class PokemonFormComponent {
       }else{                                   // will to edit
         this.editPokemon(obj)
       }
-    }else{
-      console.log('noooo')
     }
     
   }
@@ -88,9 +113,14 @@ export class PokemonFormComponent {
   }
 
   private createNewPokemon(obj:Pokemon){
-    obj.id =  this.pokemonService.getAvailablePokemonID(),
+    obj.id =  this.pokemonService.getAvailablePokemonID()
+    
+    if(this.evolutionRadioValue) this.pokemonService.updatePokemonForEvolution(obj.id)
+
     this.pokemonService.addPokemon(obj)
+
     this.pokemonService.setIsToCreate(false)
+    console.log(this.evolutionRadioValue)
     this.router.navigate(['/pokemon', obj.id])
 }
 

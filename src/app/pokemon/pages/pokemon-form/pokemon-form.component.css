@@ -29,3 +29,13 @@
 .pokemonForm label{
     margin: 5px;
 }
+.evolutionRadioContainer{
+    text-align: center;
+    margin: 20px;
+}
+
+.field-radiobutton{
+    margin: 0 10px;
+    justify-content: center;
+    align-items: center;
+}

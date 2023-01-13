@@ -70,6 +70,22 @@
     </p-fieldset>
 
 
+    <!-- ------- EVOLUTION ------- -->
+    <div [hidden]="hiddenRadioInEditPokemon" class="evolutionRadioContainer">
+        <h6>Is evolution to {{pokemonToUpdateEvolution.name}}</h6>
+        <div class="d-flex justify-content-center">
+            <div class="field-radiobutton">
+                <p-radioButton name="evolutionRadioValue" [value]=true [(ngModel)]="evolutionRadioValue" inputId="evolutionRadioValue"></p-radioButton>
+                <label for="evolutionRadioValue">Yes</label>
+            </div>
+            <div class="field-radiobutton">
+                <p-radioButton name="evolutionRadioValue" [value]=false [(ngModel)]="evolutionRadioValue" inputId="evolutionRadioValue"></p-radioButton>
+                <label for="evolutionRadioValue">No</label>
+            </div>
+        </div>
+    </div>
+
+
     <!--  --------  BUTTONS ---------  -->
     <div class="buttonsContainer">
         <button pButton type="button" label="Cancel" class="p-button-raised p-button-rounded"

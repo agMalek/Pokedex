@@ -5,6 +5,7 @@ import {CardModule} from 'primeng/card';
 import {CheckboxModule} from 'primeng/checkbox';
 import {FieldsetModule} from 'primeng/fieldset';
 import {InputTextModule} from 'primeng/inputtext';
+import {RadioButtonModule} from 'primeng/radiobutton';
 
 @NgModule({
   imports:[
@@ -12,14 +13,16 @@ import {InputTextModule} from 'primeng/inputtext';
     CardModule,
     CheckboxModule,
     FieldsetModule,
-    InputTextModule
+    InputTextModule,
+    RadioButtonModule
   ],
   exports:[
     ButtonModule,
     CardModule,
     CheckboxModule,
     FieldsetModule,
-    InputTextModule
+    InputTextModule,
+    RadioButtonModule
   ]
 })
 export class PrimeNGModule { }

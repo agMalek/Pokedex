@@ -73,6 +73,12 @@ export class PokemonService {
     this.usersService.setUsersLocalStorage(user)
   }
 
+  updatePokemonForEvolution(id:number){
+    let pokemonToUpdate:Pokemon = this._pokemons[this._pokemons.length-1]
+    pokemonToUpdate.evolutionId = id
+    this.updatePokemon(pokemonToUpdate)
+  }
+
 
   getAvailablePokemonID():number{
     const aux:Pokemon[] = JSON.parse(localStorage.getItem('pokemons')!) 
