@@ -2,11 +2,6 @@ import { Pokemon, Pokemon_abilities } from './pokemon/interfaces/interfaces';
 import { User } from './users/interfaces/intefaces';
 
 
-
-
-
-
-
 export const pokemons: Pokemon[] = [
   {
     lvl: 4,
@@ -16,7 +11,7 @@ export const pokemons: Pokemon[] = [
     type: [
       "grass"
     ],
-    image: "assets/bulbasaur.png",
+    image: "assets/images/bulbasaur.png",
     abilities: [
       {
         name: "Latigo cepa",
@@ -36,7 +31,7 @@ export const pokemons: Pokemon[] = [
     type: [
       "grass"
     ],
-    image: "assets/ivysaur.png",
+    image: "assets/images/ivysaur.png",
     abilities: [
       {
         name: "Hoja afilada",
@@ -56,7 +51,7 @@ export const pokemons: Pokemon[] = [
     type: [
       "grass"
     ],
-    image: "assets/venusaur.png",
+    image: "assets/images/venusaur.png",
     abilities: [
       {
         name: "Latigo cepa",
@@ -80,7 +75,7 @@ export const pokemons: Pokemon[] = [
     type: [
       "fire"
     ],
-    image: "assets/charmander.png",
+    image: "assets/images/charmander.png",
     abilities: [
       {
         name: "Ascuas",
@@ -94,13 +89,13 @@ export const pokemons: Pokemon[] = [
   },
   {
     lvl: 25,
-    name: "Charmaleon",
+    name: "Charmeleon",
     id: 5,
     evolutionId: 6,
     type: [
       "fire"
     ],
-    image: "assets/charmaleon.png",
+    image: "assets/images/charmeleon.png",
     abilities: [
       {
         name: "Furia",
@@ -120,7 +115,7 @@ export const pokemons: Pokemon[] = [
     type: [
       "fire"
     ],
-    image: "assets/charizard.png",
+    image: "assets/images/charizard.png",
     abilities: [
       {
         name: "Furia dragón",
@@ -140,7 +135,7 @@ export const pokemons: Pokemon[] = [
     type: [
       "water"
     ],
-    image: "assets/squirtle.png",
+    image: "assets/images/squirtle.png",
     abilities: [
       {
         name: "Ascuas",
@@ -160,7 +155,7 @@ export const pokemons: Pokemon[] = [
     type: [
       "water"
     ],
-    image: "assets/wartortle.png",
+    image: "assets/images/wartortle.png",
     abilities: [
       {
         name: "Furia",
@@ -180,7 +175,187 @@ export const pokemons: Pokemon[] = [
     type: [
       "water"
     ],
-    image: "assets/blastoise.png",
+    image: "assets/images/blastoise.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 14,
+    name: "Caterpie",
+    id: 10,
+    evolutionId: 11,
+    type: [
+      "bug"
+    ],
+    image: "assets/images/caterpie.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 52,
+    name: "Metapod",
+    id: 11,
+    evolutionId: 12,
+    type: [
+      "bug"
+    ],
+    image: "assets/images/metapod.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 33,
+    name: "Butterfree",
+    id: 12,
+    evolutionId: null,
+    type: [
+      "bug", "flying"
+    ],
+    image: "assets/images/butterfree.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 19,
+    name: "Weedle",
+    id: 13,
+    evolutionId: 14,
+    type: [
+      "bug", "poison"
+    ],
+    image: "assets/images/weedle.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 41,
+    name: "Kakuna",
+    id: 14,
+    evolutionId: 15,
+    type: [
+      "bug", "poison"
+    ],
+    image: "assets/images/kakuna.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 27,
+    name: "Beedrill",
+    id: 15,
+    evolutionId: null,
+    type: [
+      "bug", "poison"
+    ],
+    image: "assets/images/beedrill.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 48,
+    name: "Pidgey",
+    id: 16,
+    evolutionId: 17,
+    type: [
+      "normal", "flying"
+    ],
+    image: "assets/images/pidgey.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 8,
+    name: "Pidgeotto",
+    id: 17,
+    evolutionId: 18,
+    type: [
+      "normal", "flying"
+    ],
+    image: "assets/images/pidgeotto.png",
+    abilities: [
+      {
+        name: "Furia dragón",
+        description: "Furia dragón quita siempre 40 PS al objetivo, sin tener en cuenta la efectividad de tipos."
+      },
+      {
+        name: "Lanzallamas",
+        description: "Lanzallamas causa daño y tiene una probabilidad del 10% de quemar al objetivo."
+      }
+    ]
+  },
+  {
+    lvl: 13,
+    name: "Pidgeot",
+    id: 18,
+    evolutionId: null,
+    type: [
+      "normal", "flying"
+    ],
+    image: "assets/images/pidgeot.png",
     abilities: [
       {
         name: "Furia dragón",
@@ -195,13 +370,6 @@ export const pokemons: Pokemon[] = [
 ]
 
 export const abilities: Pokemon_abilities[] = [
-  /* {name:"Rapido", description:"Muy Rápido"},
-  {name:"Fuerte", description:"Muy Fuerte"},
-  {name:"Inteligente", description:"Muy inteligente"},
-  {name:"Astuto", description:"Muy astuto"},
-  {name:"Leal", description:"Muy leal"},
-  {name:"Volador", description:"Puede volar"},
-  {name:"Listo", description:"Muy Listo"}, */
   {
     name: "Latigo cepa",
     description: "Latigo cepa causa daño y no tiene ningún efecto secundario."
@@ -246,162 +414,6 @@ export const abilities: Pokemon_abilities[] = [
 
 
 export const users: User[] = [
-  { userID: 1, username: 'trainer', password: 'password', pokemons: pokemons.slice(0, 6) },
-  { userID: 2, username: 'master', password: 'password', pokemons: pokemons.slice(6, 12) }
+  { userID: 1, username: 'trainer', password: 'password', pokemons: pokemons.slice(0, 9) },
+  { userID: 2, username: 'master', password: 'password', pokemons: pokemons.slice(9) }
 ]
-  /* {
-  id: 1,
-  name: 'Picachu 1',
-  lvl: 1,
-  evolutionId: 1,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo1"],
-  image: 'img'
-},
-{
-  id: 2,
-  name: 'Picachu 2',
-  lvl: 2,
-  evolutionId: 2,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo2"],
-  image: 'img'
-},
-{
-  id: 3,
-  name: 'Picachu 3',
-  lvl: 3,
-  evolutionId: 3,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo3"],
-  image: 'img'
-},
-{
-  id: 4,
-  name: 'Picachu 4',
-  lvl: 4,
-  evolutionId: 4,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo4"],
-  image: 'img'
-},
-{
-  id: 5,
-  name: 'Picachu 5',
-  lvl: 5,
-  evolutionId: 5,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo5"],
-  image: 'img'
-},
-{
-  id: 6,
-  name: 'Picachu 6',
-  lvl: 6,
-  evolutionId: 6,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo6"],
-  image: 'img'
-},
-{
-  id: 7,
-  name: 'Pokemon 7',
-  lvl: 7,
-  evolutionId: 7,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo7"],
-  image: 'img'
-},
-{
-  id: 8,
-  name: 'Pokemon 8',
-  lvl: 8,
-  evolutionId: 8,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo8"],
-  image: 'img'
-},
-{
-  id: 3,
-  name: 'Pokemon 3',
-  lvl: 3,
-  evolutionId: 3,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo3"],
-  image: 'img'
-},
-{
-  id: 4,
-  name: 'Pokemon 4',
-  lvl: 4,
-  evolutionId: 4,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo4"],
-  image: 'img'
-},
-{
-  id: 5,
-  name: 'Pokemon 5',
-  lvl: 5,
-  evolutionId: 5,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo5"],
-  image: 'img'
-},
-{
-  id: 6,
-  name: 'Pokemon 6',
-  lvl: 6,
-  evolutionId: 6,
-  abilities: [
-    {name:"Rapido", description:"Muy Rapido"},
-    {name:"Fuerte", description:"Muy Fuerte"},
-    {name:"Listo", description:"Muy Listo"}
-  ],
-  type: ["Tipo6"],
-  image: 'img'
-}, */

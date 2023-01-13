@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
+
 import { Pokemon } from '../interfaces/interfaces';
-import { UsersService } from '../../users/service/users.service';
 import { User } from 'src/app/users/interfaces/intefaces';
+
+import { UsersService } from '../../users/service/users.service';
 
 @Injectable({
   providedIn: 'root'

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { Pokemon } from '../../interfaces/interfaces';
+
 import { PokemonService } from '../../services/pokemon.service';
 import { UsersService } from '../../../users/service/users.service';
 
@@ -24,7 +26,6 @@ export class PokemonViewComponent implements OnInit{
   ngOnInit(): void {
     this.hiddenEvolution = false
     const id = parseInt(this.route.snapshot.params['id'])
-    console.log(id)
     this.pokemonService.setPokemonCurrent(id)
     this.pokemonCurrent = this.pokemonService.getPokemonCurrent
     

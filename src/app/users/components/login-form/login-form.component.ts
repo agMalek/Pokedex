@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../interfaces/intefaces';
-import { UsersService } from '../../service/users.service';
 import { Router } from '@angular/router';
+
+import { User } from '../../interfaces/intefaces';
+
 import { PokemonService } from '../../../pokemon/services/pokemon.service';
+import { UsersService } from '../../service/users.service';
 
 @Component({
   selector: 'app-login-form',
@@ -22,8 +24,8 @@ export class LoginFormComponent implements OnInit{
     this.usersService.setUserCurrentFromLocalStorage()
   }
 
-  username:string="trainer"
-  password:string="password"
+  username:string=""
+  password:string=""
 
   
   login():void{

@@ -12,11 +12,9 @@ export class PokemonListComponent implements OnInit{
   pokemonsArray:Pokemon[] = []
   
   constructor(private pokemonService:PokemonService){
-    //this.pokemonsArray = this.pokemonService.getPokemons
   }
   
   ngOnInit(): void {
-    console.log('holaaaa', this.pokemonService.getPokemons)
     this.pokemonsArray = this.pokemonService.getPokemons
   }
     

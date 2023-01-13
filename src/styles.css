@@ -4,5 +4,6 @@
 }
 
 :root{
-    --blueColor: rgb(91, 155, 213)
+    --blueColor: rgb(91, 155, 213);
+    --blueColorRGBA: rgba(91, 155, 213, .4);
 }

@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { abilities as allAbilities } from '../../../arraysData';
-import { Pokemon, Pokemon_abilities } from '../../interfaces/interfaces';
-import { PokemonService } from '../../services/pokemon.service';
 import { Router } from '@angular/router';
+
+import { abilities as allAbilities } from '../../../arraysData';
+
+import { Pokemon, Pokemon_abilities } from '../../interfaces/interfaces';
+
+import { PokemonService } from '../../services/pokemon.service';
 import { UsersService } from '../../../users/service/users.service';
 
 @Component({
@@ -35,20 +38,13 @@ export class PokemonFormComponent {
     this.abilities = allAbilities
     this.pokemonCurrent = this.pokemonService.getPokemonCurrent
     this.pokemonToUpdateEvolution = this.pokemonService.getPokemons[this.pokemonService.getPokemons.length-1]
-    
-   /*  this.primerIntento = this.pokemonService.getIsToCreate ? true : false
-    this.nameValue = this.pokemonService.getIsToCreate ? '' : this.pokemonCurrent.name
-    this.typeValue = this.pokemonService.getIsToCreate ? '' : this.pokemonCurrent.type[0]
-    this.lvlValue = this.pokemonService.getIsToCreate ? 1 : this.pokemonCurrent.lvl
-    this.imgValue = this.pokemonService.getIsToCreate ? '' : this.pokemonCurrent.image
-    this.selectedAbilities = this.pokemonService.getIsToCreate ? [] : this.convertToStringsArray() */
 
     if(this.pokemonService.getIsToCreate){
       this.primerIntento =  true 
       this.nameValue =  '' 
       this.typeValue =  '' 
       this.lvlValue =  1 
-      this.imgValue = '' 
+      this.imgValue = "assets/images/bulbasaur.png"
       this.selectedAbilities = []
       this.hiddenRadioInEditPokemon = false
     }
@@ -118,9 +114,7 @@ export class PokemonFormComponent {
     if(this.evolutionRadioValue) this.pokemonService.updatePokemonForEvolution(obj.id)
 
     this.pokemonService.addPokemon(obj)
-
     this.pokemonService.setIsToCreate(false)
-    console.log(this.evolutionRadioValue)
     this.router.navigate(['/pokemon', obj.id])
 }
 

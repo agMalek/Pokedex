@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { PokemonService } from '../../services/pokemon.service';
 import { Router } from '@angular/router';
+import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
   selector: 'app-new-button',

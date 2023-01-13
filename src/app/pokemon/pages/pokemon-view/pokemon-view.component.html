@@ -2,7 +2,7 @@
 <app-list-item [pokemon]="pokemonCurrent"></app-list-item>
 
 <div class="imgContainer">
-    <img class="pokemonImg" src="../../../../assets/images/pikachu.jpg" alt="">
+    <img class="pokemonImg" [src]="pokemonCurrent.image" alt="">
 </div>
 
 <div class="abilitiesConainer">

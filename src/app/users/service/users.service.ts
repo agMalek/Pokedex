@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { users } from 'src/app/arraysData';
+
 import { Pokemon } from 'src/app/pokemon/interfaces/interfaces';
 import { User } from '../interfaces/intefaces';
 
