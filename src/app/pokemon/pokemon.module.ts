@@ -9,6 +9,7 @@ import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 import { PokemonFormComponent } from './pages/pokemon-form/pokemon-form.component';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { LogoutComponent } from './components/logout/logout.component';
 
 
 
@@ -16,6 +17,7 @@ import { HttpClientModule } from "@angular/common/http";
   declarations: [
     PokemonListComponent,
     ListComponent,
+    LogoutComponent,
     NewButtonComponent,
     PokemonViewComponent,
     PokemonFormComponent

@@ -31,7 +31,7 @@ export class UsersService{
 
   setUsersLocalStorage(user:User):void{
     let i = this._allUsers.findIndex(u => u.userID === this._currentUser.userID)
-    this._allUsers.splice(0,1,user)
+    this._allUsers.splice(i,1,user)
     localStorage.setItem('users', JSON.stringify([...this._allUsers]))
   }
 

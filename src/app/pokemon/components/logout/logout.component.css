@@ -1,0 +1,23 @@
+
+.outButton, .outButton span {
+    color: var(--blueColor);
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.outButton button{
+    background-color: transparent;
+    border: none;
+    width: 30px;
+}
+
+.outButton i{
+    font-size: 25px;
+    color: var(--blueColor);
+}
+
+.outButton{
+    height: 100%;
+    padding: 15%;
+}

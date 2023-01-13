@@ -24,11 +24,13 @@ export class PokemonService {
     return this._isToCreate
   }
 
-  
+  setPokemons(){
+    this._pokemons = this.usersService.getCurrentUser.pokemons
+  }
 
   constructor(private usersService:UsersService){
     this.usersService.setUserCurrentFromLocalStorage()
-    this._pokemons = this.usersService.getCurrentUser.pokemons
+    this.setPokemons()
   };
 
   setPokemonCurrent(id:number){

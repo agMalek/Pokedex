@@ -6,7 +6,7 @@ import { TitlePokedexComponent } from './title-pokedex/title-pokedex.component';
 
 @NgModule({
   declarations: [
-    TitlePokedexComponent
+    TitlePokedexComponent,
   ],
   exports:[
     TitlePokedexComponent

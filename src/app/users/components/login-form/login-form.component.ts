@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../interfaces/intefaces';
 import { UsersService } from '../../service/users.service';
 import { Router } from '@angular/router';
+import { PokemonService } from '../../../pokemon/services/pokemon.service';
 
 @Component({
   selector: 'app-login-form',
@@ -13,7 +14,7 @@ export class LoginFormComponent implements OnInit{
   allUsers:User[] = []
   showWarning:boolean = false
 
-  constructor(private usersService:UsersService, private router:Router){
+  constructor(private usersService:UsersService, private router:Router, private pokemonService:PokemonService){
     this.allUsers = this.usersService.allUsers
   }
 
@@ -33,6 +34,7 @@ export class LoginFormComponent implements OnInit{
       this.usersService.setCurrentUser({...user})
       this.router.navigate(['/user-pokemons', user.userID])
       localStorage.setItem('currentUserId', JSON.stringify(user.userID))
+      this.pokemonService.setPokemons()
 
     }
     else{
